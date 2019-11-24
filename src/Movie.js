@@ -13,9 +13,6 @@ function Movie({ year, title, summary, poster, genres }) {
       <div className="movie__data">
         <h3 className="movie__title">{title}</h3>
         <h5 className="movie__year">{year}</h5>
-        <p className="movie__summary">
-          {summary.slice(0, 200)}...
-        </p>
         <ul className="movie__genres">
           {genres.map((genre, index) => (
             <li className="genres__genre" key={index}>
@@ -23,6 +20,11 @@ function Movie({ year, title, summary, poster, genres }) {
             </li>
           ))}
         </ul>
+        <p className="movie__summary">
+          {summary.length > 400
+            ? `${summary.slice(0, 400)}...`
+            : summary}
+        </p>
       </div>
     </div>
   );
