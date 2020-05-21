@@ -35,15 +35,17 @@ body {
   margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .movies .movie {
   background-color: white;
   width: 45%;
+  min-width: 400px;
   padding: 15px;
   box-shadow: 10px 10px 14px -5px rgba(0, 0, 0, 0.26);
   margin-bottom: 60px;
+  margin-right: 15px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
