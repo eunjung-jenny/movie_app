@@ -43,7 +43,7 @@ function Movie({
           </ul>
           <p className="movie__summary">
             {summary.length > 400
-              ? `${summary.slice(0, 400)}...`
+              ? `${summary.slice(0, 300)}...`
               : summary}
           </p>
         </div>

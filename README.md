@@ -2,6 +2,8 @@
 
 React JS Fundamentals Course with Nicolas from Nomad Academy (2019)
 
+> 영화 정보 api 로부터 받아온 데이터를 react 를 활용하여 보여주는 SPA 실습
+
 - https://2019.stateofjs.com/
 
 ![image-20200414180828678](/Users/eunjung/Documents/movie_app/images/image-20200414180828678.png)
@@ -227,3 +229,26 @@ import { Link } from "react-router-dom";
 #### (1) hook
 
 #### (2) redux
+
+## 4. github page 배포
+
+- 다음과 같이 스크립트를 추가하면 `npm run deploay` 명령어 실행시 다음과 같은 순서로 작업이 수행됨
+
+  - npm run deploy -> predeploy 선호출
+  - npm run build -> react-scripts build 호출
+  - 최적화 후 배포를 위한 build 폴더 생성
+  - deploy 호출 -> gh-pages -d build 호출
+  - build 폴더가 업로드 됨
+
+```json
+// package.json
+{
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
+  },
+  "homepage": "https://[깃허브 이름].github.io/[레포명]"
+}
+```
