@@ -6,8 +6,8 @@ React JS Fundamentals Course with Nicolas from Nomad Academy (2019)
 
 - https://2019.stateofjs.com/
 
-![image-20200414180828678](/Users/eunjung/Documents/movie_app/images/image-20200414180828678.png)
-![image-20200414180828678](/Users/eunjung/Documents/movie_app/images/image-20200414180803793.png)
+![image-20200414180828678](/images/image-20200414180828678.png)
+![image-20200414180828678](/images/image-20200414180803793.png)
 
 ## 0. 프로젝트 준비 사항
 
@@ -214,7 +214,7 @@ import { Link } from "react-router-dom";
 </Link>
 ```
 
-![image-20200414180828678](/Users/eunjung/Documents/movie_app/images/image-20200521114034124.png)
+![image-20200414180828678](/images/image-20200521114034124.png)
 
 ## 3. 추가 구현
 
