@@ -1,3 +1,8 @@
+.movies a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .movies .movie {
   background-color: white;
   width: 45%;

@@ -213,3 +213,17 @@ import { Link } from "react-router-dom";
 ```
 
 ![image-20200414180828678](/Users/eunjung/Documents/movie_app/images/image-20200521114034124.png)
+
+## 3. 추가 구현
+
+### 1) 완료
+
+#### (1) 위치를 인식하는 nav
+
+- `import { withRouter } from "react-router-dom";` 활용
+
+### 2) 예정
+
+#### (1) hook
+
+#### (2) redux

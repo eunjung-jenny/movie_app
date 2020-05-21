@@ -1,0 +1,16 @@
+nav {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+.current {
+  background-color: rgba(255, 255, 255, 0.5);
+}
