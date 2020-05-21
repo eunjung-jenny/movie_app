@@ -49,7 +49,7 @@ npm start # 앱 실행
 
 - 컴포넌트 간의 데이터는 **Props(property)** 로 전달한다.
 
-```js
+```react
 function Food({ name }) {
   return <h1>I like {name}</h1>;
 }
@@ -66,7 +66,7 @@ function App() {
 
 - 컴포넌트에 데이터를 동적으로 전달하기
 
-```js
+```react
 function App() {
   return (
     <div>
@@ -100,7 +100,7 @@ Food.propTypes = {
 
 - **state의 값을 직접적으로(`this.state.count = 1`) 변경해서는 안되며, 이 경우에는 render 메서드가 자동적으로 실행되지 않는다.** => **setState를 사용!!**
 
-```js
+```react
 class App extends React.Component {
   state = {
     count: 0,
@@ -170,7 +170,7 @@ componentDidUpdate() {
 
 - 일치하는 path 에 대한 모든 컴포넌트를 실행하게 되므로 sub-path 가 겹치는 경우에는 `exact={true}` 를 통해 사이드 이펙트를 방지
 
-```js
+```react
 import { HashRouter, Route } from "react-router-dom"
 
 function App() {
@@ -187,10 +187,29 @@ function App() {
 - SPA 방식으로 동작하기 위해서는 `<Link to="#"></Link>` 로 대체
 - **Link 는 Router 내에서 작동함**
 
-```js
+```react
 import { Link } from "react-router-dom";
 
 <Link to="/">Home</Link>;
 ```
 
 #### (3) Route props
+
+- 모든 Route 는 **자동적으로 받는 Props 가 존재함**
+
+  - history, location, match, staticContext
+
+- `<Link to={특정 정보들로 이루어진 오브젝트}></Link>` 와 같이 to 속성에 전달하는 값을 지정할 수 있음
+
+```react
+<Link
+  to={{
+    pathname: "/about",
+    state: { fromNavigation: true },
+  }}
+>
+  About
+</Link>
+```
+
+![image-20200414180828678](/Users/eunjung/Documents/movie_app/images/image-20200521114034124.png)
