@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.container {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(202, 223, 215);
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.container .loader {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.container .movies {
+  width: 90%;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

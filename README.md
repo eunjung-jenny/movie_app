@@ -17,6 +17,7 @@ React JS Fundamentals Course with Nicolas from Nomad Academy (2019)
 - create-react-app
 - prop-types
 - axios
+- react-router-dom
 
 ```bash
 node -v
@@ -162,3 +163,34 @@ componentDidUpdate() {
   console.log("componentDidUpdate")
 }
 ```
+
+### 3) react-router-dom
+
+#### (1) Router & Route
+
+- 일치하는 path 에 대한 모든 컴포넌트를 실행하게 되므로 sub-path 가 겹치는 경우에는 `exact={true}` 를 통해 사이드 이펙트를 방지
+
+```js
+import { HashRouter, Route } from "react-router-dom"
+
+function App() {
+  return <HashRouter>
+    <Route path="/" exact={true} component={[렌더링할 스크린]} />
+    <Route path="[해당하는 url]" component={[렌더링할 스크린]} />
+  </HashRouter>
+}
+```
+
+#### (2) Link
+
+- navigation bar 를 만들 때 `<a href="#"></a>` 를 사용하게 되면 페이지 로딩이 발생
+- SPA 방식으로 동작하기 위해서는 `<Link to="#"></Link>` 로 대체
+- **Link 는 Router 내에서 작동함**
+
+```js
+import { Link } from "react-router-dom";
+
+<Link to="/">Home</Link>;
+```
+
+#### (3) Route props
